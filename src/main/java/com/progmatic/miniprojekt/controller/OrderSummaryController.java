@@ -6,6 +6,7 @@ import com.progmatic.miniprojekt.service.TestDataLoader;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -27,6 +28,20 @@ public class OrderSummaryController {
         model.addAttribute("orders", orderSummaries);
 
         return "orders";
+    }
+
+    @GetMapping("/new")
+    public String createOrder(Model model) {
+        model.addAttribute("nOrder", new OrderSummary());
+
+        return "create";
+    }
+
+    @PostMapping("/new")
+    public String saveNewOrder(OrderSummary orderSummary) {
+        orderSummaryService.saveOrder(orderSummary);
+
+        return "redirect:/home";
     }
 
     @GetMapping("/load")

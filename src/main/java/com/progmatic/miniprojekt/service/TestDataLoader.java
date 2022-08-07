@@ -17,12 +17,12 @@ public class TestDataLoader {
 
     public void loadData() {
 
-        OrderSummary o1 = new OrderSummary("test1, test2, test3", "est1, est2, est3", 50.99);
-        OrderSummary o2 = new OrderSummary("test11, test12, test13", "est11, est12, est13", 50.99);
-        OrderSummary o3 = new OrderSummary("test21, test22, test23", "est21, est22, est23", 50.99);
-        OrderSummary o4 = new OrderSummary("test31, test32, test33", "est31, est32, est33", 50.99);
-        OrderSummary o5 = new OrderSummary("test41, test42, test43", "est41, est42, est43", 50.99);
-        OrderSummary o6 = new OrderSummary("test51, test52, test53", "est51, est52, est53", 50.99);
+        OrderSummary o1 = new OrderSummary("Cézár Saláta, Borsos tokány, Palacsinta", "Kóla, Sör, Almalé", 30.99);
+        OrderSummary o2 = new OrderSummary("Húsleves, Rizseshús, Palacsinta", "Kóla, Bor, Pálinka", 45.99);
+        OrderSummary o3 = new OrderSummary("Húsleves, Cézár Saláta, Palacsinta", "Bor, Pálinka, Fanta", 22.99);
+        OrderSummary o4 = new OrderSummary("Húsleves, Pörkölt, Rizseshús", "Sör, Kóla, Almalé", 60.99);
+        OrderSummary o5 = new OrderSummary("Borsos tokány, Rizseshús, Pörkölt", "Pálinka, Sör, Bor", 70.99);
+        OrderSummary o6 = new OrderSummary("Borsos tokány, Palacsinta, Cézár Saláta", "Almalé, Kóla, Pálinka", 33.99);
 
         orderSService.saveAll(Arrays.asList(o1, o2, o3, o4, o5, o6));
     }

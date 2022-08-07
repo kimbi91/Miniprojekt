@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/style.css">
+
+    <meta charset="UTF-8">
+    <title>Create order</title>
+</head>
+<body>
+<div id="container">
+
+    <div id="menu_bar">
+        <a data-th-href="@{/home}">Home</a>
+        <a class="active" data-th-href="@{/new}">New order</a>
+    </div>
+
+    <div id="content">
+    <form data-th-action="@{/new}" data-th-object="${nOrder}" method="post">
+        <table>
+            <tr>
+                <th>Foods:</th>
+                <td><input type="text" data-th-field="*{foodOrders}" /></td>
+            </tr>
+            <tr>
+                <th>Drinks:</th>
+                <td><input type="text" data-th-field="*{drinkOrders}" /></td>
+            </tr>
+            <tr>
+                <th>Total:</th>
+                <td><input type="number" step="0.01" data-th-field="*{totalPrice}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Send order</button></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+</div>
+</body>
+</html>
