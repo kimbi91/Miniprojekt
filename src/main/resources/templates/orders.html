@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Food orders</th>
+            <th>Drink orders</th>
+            <th>Total</th>
+        </tr>
+        <tr data-th-each="order : ${orders}">
+            <td data-th-text="${order.id}"></td>
+            <td data-th-text="${order.foodOrders}"></td>
+            <td data-th-text="${order.drinkOrders}"></td>
+            <td data-th-text="${order.totalPrice}"></td>
+        </tr>
+    </table>
+</body>
+</html>
