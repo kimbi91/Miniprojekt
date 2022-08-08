@@ -1,7 +1,7 @@
 package com.progmatic.miniprojekt.service;
 
 
-import com.progmatic.miniprojekt.modell.OrderSummary;
+import com.progmatic.miniprojekt.model.OrderSummary;
 import com.progmatic.miniprojekt.repository.OrderSRepository;
 import org.springframework.stereotype.Service;
 

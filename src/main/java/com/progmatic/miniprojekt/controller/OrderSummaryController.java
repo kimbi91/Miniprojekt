@@ -1,6 +1,6 @@
 package com.progmatic.miniprojekt.controller;
 
-import com.progmatic.miniprojekt.modell.OrderSummary;
+import com.progmatic.miniprojekt.model.OrderSummary;
 import com.progmatic.miniprojekt.service.OrderSummaryService;
 import com.progmatic.miniprojekt.service.TestDataLoader;
 import org.springframework.stereotype.Controller;
